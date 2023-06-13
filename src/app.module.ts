@@ -7,12 +7,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Usuario } from './usuario/entities/usuario.entity';
 import { RolModule } from './rol/rol.module';
 import { Rol } from './rol/entities/rol.entity';
-import { ClienteModule } from './cliente/cliente.module';
-import { Cliente } from './cliente/entities/cliente.entity';
-import { VehiculosModule } from './vehiculos/vehiculos.module';
-import { Vehiculo } from './vehiculos/entities/vehiculo.entity';
-import { FaenaModule } from './faena/faena.module';
-import { Faena } from './faena/entities/faena.entity';
 
 @Module({
   imports: [
@@ -20,7 +14,7 @@ import { Faena } from './faena/entities/faena.entity';
       type: 'mongodb',
       url: process.env.MONGO_ATLAS_URI,
       useUnifiedTopology: true,
-      entities: [Usuario, Rol, Cliente, Vehiculo, Faena],
+      entities: [Usuario, Rol],
       synchronize: true,
       autoLoadEntities: true,
       logging: 'all',
@@ -41,9 +35,6 @@ import { Faena } from './faena/entities/faena.entity';
     AuthModule,
     UsuarioModule,
     RolModule,
-    ClienteModule,
-    VehiculosModule,
-    FaenaModule,
   ],
   controllers: [AppController],
   providers: [AppService],

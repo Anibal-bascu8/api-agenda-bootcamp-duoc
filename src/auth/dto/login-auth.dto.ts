@@ -5,7 +5,7 @@ import { IsString } from 'class-validator';
 export class LoginDto {
   @IsString()
   @ApiProperty()
-  rut: string;
+  email: string;
 
   @IsString()
   @ApiProperty()

@@ -18,10 +18,10 @@ export class AuthService {
   ) {}
 
   async login(loginDto: LoginDto) {
-    const { rut, contrasena } = loginDto;
+    const { email, contrasena } = loginDto;
 
     try {
-      const dataFind = await this.usuarioRep.findOne({ where: { rut } });
+      const dataFind = await this.usuarioRep.findOne({ where: { email } });
 
       if (!dataFind) {
         return {

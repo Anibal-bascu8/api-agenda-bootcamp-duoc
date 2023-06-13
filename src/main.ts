@@ -26,8 +26,8 @@ async function bootstrap() {
 
 
   const config = new DocumentBuilder()
-    .setTitle('Api JMF')
-    .setDescription('API Servicios JMF')
+    .setTitle('Api Reserva Eventos')
+    .setDescription('API Reserva Eventos')
     .setVersion('1.0')
     .addTag('Api Version 1.0')
     .addBearerAuth()
